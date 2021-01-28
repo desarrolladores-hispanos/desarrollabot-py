@@ -8,4 +8,4 @@ client = commands.Bot(command_prefix = "dpy!")
 async def on_ready():
     print("listo xd")
 
-client.run(os.environ.get("BOT_TOKEN"))
+client.run(os.environ["BOT_TOKEN"])

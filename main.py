@@ -1,6 +1,6 @@
 import os
 import discord
-import random
+from random import randint
 from discord.ext import commands
 
 client = commands.Bot(command_prefix = "dpy!")

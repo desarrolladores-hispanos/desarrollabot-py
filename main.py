@@ -29,4 +29,14 @@ async def repetir(ctx, message):
 	await ctx.message.delete()
 	await ctx.send(message)
 
+@client.command()
+async def redes(ctx):
+    await ctx.send(
+        """
+Twitter: https://twitter.com/dh_rblx
+Sitio web: https://desarrolladoreshispanos.com/
+GitHub: https://github.com/Desarrolladores-Hispanos
+Discord: pues ya estás en el servidor xd
+        """)
+
 client.run(os.getenv("BOT_TOKEN"))

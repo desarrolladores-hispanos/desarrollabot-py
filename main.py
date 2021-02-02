@@ -33,9 +33,10 @@ async def repetir(ctx, message):
 async def redes(ctx):
     await ctx.send(
         """
-Twitter: https://twitter.com/dh_rblx
-Sitio web: https://desarrolladoreshispanos.com/
-GitHub: https://github.com/Desarrolladores-Hispanos
+Twitter: <https://twitter.com/dh_rblx>
+Sitio web: <https://desarrolladoreshispanos.com/>
+GitHub: <https://github.com/Desarrolladores-Hispanos>
+Grupo de Roblox: <https://www.roblox.com/groups/9369198/Desarrolladores-Hispanos>
 Discord: pues ya estás en el servidor xd
         """)
 

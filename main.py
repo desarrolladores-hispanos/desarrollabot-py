@@ -23,4 +23,10 @@ async def pato(ctx):
 	new_embed.set_image(url = url)
 	await ctx.send(embed = new_embed)
 
+@client.command()
+@commands.has_permissions(administrator = True)
+async def repetir(ctx, message):
+	await ctx.message.delete()
+	await ctx.send(message)
+
 client.run(os.getenv("BOT_TOKEN"))

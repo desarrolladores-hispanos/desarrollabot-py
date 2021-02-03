@@ -51,6 +51,4 @@ Discord: pues ya estás en el servidor xd
 async def eliminar(ctx, cantidad):
     await ctx.channel.purge(limit = int(cantidad) + 1)
 
-
-
 client.run(os.getenv("BOT_TOKEN"))

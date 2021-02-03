@@ -51,7 +51,7 @@ async def eliminar(ctx, cantidad):
 @client.command()
 async def convertir_a_robux(ctx, usd):
     usd = "%.2f" % float(usd)
-    await ctx.send("USD %s son <:robux:806422545359306752> %s" % (f"{usd:,}", f"{float(usd)/0.0035):,}"))
+    await ctx.send("USD %s son <:robux:806422545359306752> %s" % (f"{usd:,}", f"{float(usd)/0.0035:,}"))
 
 @client.command()
 async def convertir_a_usd(ctx, robux):

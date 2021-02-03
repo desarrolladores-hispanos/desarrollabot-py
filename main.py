@@ -7,7 +7,12 @@ client = commands.Bot(command_prefix = "dpy!")
 
 @client.event
 async def on_ready():
-    print("listo xd")
+    await bot.change_presence(
+        activity = discord.Activity(
+            type = discord.ActivityType.listening,
+            name = "corridones"
+        )
+    )
 
 @client.command()
 async def pato(ctx):
@@ -38,6 +43,14 @@ Sitio web: <https://desarrolladoreshispanos.com>
 GitHub: <https://github.com/Desarrolladores-Hispanos>
 Grupo de Roblox: <https://www.roblox.com/groups/9369198/Desarrolladores-Hispanos>
 Discord: pues ya estás en el servidor xd
-        """)
+        """
+    )
+
+@client.command()
+@commands.has_permissions(manage_messages = True)
+async def eliminar(ctx, cantidad):
+    await ctx.channel.purge(limit = int(cantidad) + 1)
+
+
 
 client.run(os.getenv("BOT_TOKEN"))

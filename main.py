@@ -7,7 +7,7 @@ client = commands.Bot(command_prefix = "dpy!")
 
 @client.event
 async def on_ready():
-    await bot.change_presence(
+    await client.change_presence(
         activity = discord.Activity(
             type = discord.ActivityType.listening,
             name = "corridones"

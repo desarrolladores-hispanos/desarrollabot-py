@@ -50,10 +50,10 @@ async def eliminar(ctx, cantidad):
 
 @client.command()
 async def convertir_a_robux(ctx, usd):
-    await ctx.send(f"USD ${usd} son <:robux:806422545359306752> {usd/0.0035}")
+    await ctx.send(f"USD ${usd} son <:robux:806422545359306752> {float(usd)/0.0035}")
 
 @client.command()
 async def convertir_a_usd(ctx, robux):
-    await ctx.send(f"<:robux:806422545359306752> {robux} son USD ${robux*0.0035}")
+    await ctx.send(f"<:robux:806422545359306752> {robux} son USD ${int(robux)*0.0035}")
 
 client.run(os.getenv("BOT_TOKEN"))

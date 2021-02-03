@@ -17,7 +17,7 @@ async def on_ready():
 @client.command()
 async def pato(ctx):
 	new_embed = discord.Embed(
-		title = f"Pato n°{duck_number}",
+		title = "Un pato",
 		description = f"Cuá cuá, {ctx.message.author.mention}, ¡aquí está tu pato!",
 		colour = discord.Colour.blue()
 	)

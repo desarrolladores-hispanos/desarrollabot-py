@@ -16,8 +16,6 @@ async def on_ready():
 
 @client.command()
 async def pato(ctx):
-	duck_number = randint(1, 138)
-	url = f"https://www.random-d.uk/api/{duck_number}.jpg"
 	new_embed = discord.Embed(
 		title = f"Pato n°{duck_number}",
 		description = f"Cuá cuá, {ctx.message.author.mention}, ¡aquí está tu pato!",
@@ -25,7 +23,7 @@ async def pato(ctx):
 	)
 
 	new_embed.set_author(name = "DesarrollaBot.py")
-	new_embed.set_image(url = url)
+	new_embed.set_image(url = "https://www.random-d.uk/api/randomimg")
 	await ctx.send(embed = new_embed)
 
 @client.command()

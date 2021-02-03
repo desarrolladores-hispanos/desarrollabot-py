@@ -48,4 +48,12 @@ Discord: pues ya estás en el servidor xd
 async def eliminar(ctx, cantidad):
     await ctx.channel.purge(limit = int(cantidad) + 1)
 
+@client.command()
+async def convertir_a_robux(ctx, usd):
+    await ctx.send(f"USD ${usd} son <:robux:806422545359306752> {usd/0.0035}")
+
+@client.command()
+async def convertir_a_usd(ctx, robux):
+    await ctx.send(f"<:robux:806422545359306752> {robux} son USD ${robux*0.0035}")
+
 client.run(os.getenv("BOT_TOKEN"))

@@ -1,8 +1,13 @@
+import math
 import os
 import discord
 from discord.ext import commands
 
 client = commands.Bot(command_prefix = "dpy!")
+
+def round_to_place(number, decimal = 1):
+    factor = 10.0**decimal
+    return math.trunc(number*factor)/factor
 
 @client.event
 async def on_ready():
@@ -51,11 +56,11 @@ async def eliminar(ctx, cantidad):
 @client.command()
 async def convertir_a_robux(ctx, usd):
     usd = float("%.2f" % float(usd)) # definitivamente hay una mejor manera de hacer esto xd
-    await ctx.send("USD %s son <:robux:806422545359306752> %s" % (f"{usd:,}", f"{usd/0.0035:,}"))
+    await ctx.send("USD %s son <:robux:806422545359306752> %s" % (f"{usd:,}", f"{round_to_place(usd/0.0035, 2):,}"))
 
 @client.command()
 async def convertir_a_usd(ctx, robux):
     robux = int("%.2f" % int(robux)) # definitivamente hay una mejor manera de hacer esto xd
-    await ctx.send("<:robux:806422545359306752> %s son USD $%s" % (f"{robux:,}", f"{robux*0.0035:,}"))
+    await ctx.send("<:robux:806422545359306752> %s son USD $%s" % (f"{robux:,}", f"{round_to_place(robux*0.0035, 2):,}"))
 
 client.run(os.getenv("BOT_TOKEN"))
